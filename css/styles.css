@@ -1,0 +1,237 @@
+/* || ASSETS || */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* || MODERN RESET
+        Credits go to:
+            Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/ || */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* || STYLESHEET || */
+:root {
+/* Background colors */
+    --BG-COLOR: hsl(0, 0%, 98%);
+
+/* Border colors */   
+    --SUPERVISOR_BD-COLOR: hsl(180, 62%, 55%);
+    --TEAM-BUILDER_BD-COLOR: hsl(0, 78%, 62%);
+    --KARMA_BD-COLOR: hsl(34, 97%, 64%);
+    --CALCULATOR_BD-COLOR: hsl(212, 86%, 64%);
+
+/* Font colors */
+    --TITLE_F-COLOR: hsl(234, 12%, 34%);
+    --PARAGRAPH_F-COLOR: hsl(229, 6%, 66%);
+}
+
+/* || || MOBILE || || */
+/* || BODY || */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 375px;
+    background-color: var(--BG-COLOR);
+    font-family: 'Poppins', Georgia, 'Times New Roman', Times, serif;
+    padding: 5.3125em 2em 2em;
+}
+
+/* || HEADER || */
+header {
+  padding-bottom: 4.75em;
+}
+
+#subtitle {
+  font-weight: 200;
+}
+
+h1 {
+  color: var(--TITLE_F-COLOR);
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.17px;
+}
+
+p {
+  color: var(--PARAGRAPH_F-COLOR);
+}
+
+.paragraph__1 {
+  font-size:  0.9375em;
+  padding-top: 1em;
+  line-height: 1.5625em;
+}
+
+
+/* || MAIN || */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 1.0625em 1.3125em;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+img {
+  align-self: flex-end;
+  width: 4em;
+  height: 4em;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.221875em;
+  border-radius: 8px 8px 0 0;
+}
+
+section:nth-child(1)::before{
+  background-color: var(--SUPERVISOR_BD-COLOR);
+}
+
+section:nth-child(2)::before {
+ background-color: var(--TEAM-BUILDER_BD-COLOR);
+}
+
+section:nth-child(3)::before {
+  background-color: var(--KARMA_BD-COLOR);
+}
+
+section:nth-child(4)::before {
+ background-color: var(--CALCULATOR_BD-COLOR);
+}
+
+h2 {
+  color: var(--TITLE_F-COLOR);
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.paragraph__2 {
+  font-size: 0.8125em;
+  line-height: 1.5625em;
+  letter-spacing: 0.00625em;
+  padding: 0.375em 0 2.0625em;
+}
+
+/* || FOOTER || */
+.attribution {
+  color: var(--TITLE_F-COLOR);
+  font-size: 0.8125em;
+  white-space: break-spaces;
+}
+
+a {
+  color: var(--TITLE_F-COLOR);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--TEAM-BUILDER_BD-COLOR);
+  transition: 0.1s ease-in-out;
+}
+
+a:visited {
+  color: var(--TEAM-BUILDER_BD-COLOR);
+}
+
+
+/* || || MOBILE L -> DESKTOP || || */
+/* || MAIN || */
+@media (min-width: 425px) {
+  section {
+    max-width: 19.4375em;
+  }
+}
+
+/* || || DESKTOP || || */
+/* || BODY || */
+@media (min-width: 1024px) {
+/* body {
+  padding: 5em 10.3125em;
+} */
+
+/* || HEADER || */
+  header {
+    width: 33.75em;
+    padding-bottom: 4em;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+/* || MAIN || */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0 1fr;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 4em;
+  }
+
+  section {
+    margin: 1em;
+    padding: 2em;
+    width: 21.875em;
+    height: 15.625em;
+  }
+
+  section:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  section:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  section:nth-child(3) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  section:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
