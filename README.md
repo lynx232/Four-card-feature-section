@@ -26,12 +26,15 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 
 ### Screenshots
-
-![](./screenshots/mobile.png)
 Mobile
-![](./screenshots/tablet.png)
+![](./screenshots/mobile.png)
+
 Tablet
+![](./screenshots/tablet.png)
+
+Desktop
 ![](./screenshots/desktop.png)
+
 Ultrawide
 ![](./screenshots/ultrawide.png)
 
